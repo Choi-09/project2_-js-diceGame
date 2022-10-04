@@ -1,0 +1,132 @@
+/* 레이아웃 */
+
+* {
+    margin : 0px;
+    padding: 0px;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    /* vh: 화면 높이에 비례 */
+    /* vw: 화면 폭에 비례 */
+    width:100%;
+    height: 10vh;
+    background-color: #090a47;
+    color: white;
+    text-align:center;
+    /*flex : header "자바스크립트" 정렬*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* top, position: 고정 */
+    top : 0;
+    position:sticky;
+    font-family: 'Sunflower', sans-serif;
+}
+
+main {
+    width: 100%;
+    height: 90vh;
+      /* section 가운데 정렬 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    color: white; 
+}   
+
+main div {
+    height: 10%;
+    /* h2 "주사위게임 가운데정렬 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+section {
+    text-align: center;
+    margin: 20px;
+}
+
+#buttonSection {
+    display: flex;
+    flex-direction: column;
+}
+button{
+    /* display: inline-block; */
+    margin: 1vh;
+    width: 50vw;
+    border: none;
+    border-radius: 8px;
+    background-color: #CA8A8B;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none; 
+    cursor: pointer;
+    }
+
+button:hover, button:active {
+    background-color: #090a47;
+    color : #CA8A8B;
+    }
+
+/* .divMsg:hover, #divMsg:active{
+    background-color: #F6E6E4;
+    color : #CA8A8B;
+} */
+
+/* radio */
+/* labels for checked inputs */
+/* radio element, when checked */
+input[type = "radio"] {
+    display: none;
+}
+
+input[type="radio"] + label{
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid #dfdfdf;
+    background-color: #E2BCB7;
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+input[type="radio"]:checked + label {
+    background-color: #E2BCB7;
+    color: gray;
+}
+
+fieldset {
+    padding: 5vw 3vw;
+    width: 50vw;
+    height: 12vh;
+    font-size: 3vw;
+    border: 2px solid #dfdfdf;
+    color: white;
+    
+}
+#fieldTitle {
+    font-size: 2vw;
+    font-weight: bold;
+    color: gray;
+}
+
+/* button은 인라인태그. 각각 효과를 넣으려면 
+   인라인>블록형 태그로 바꿔서 적용 */
+
+img{
+    display: block;
+    width: 20vw;
+    max-width: 100px;
+    margin-bottom: 5vh;
+}

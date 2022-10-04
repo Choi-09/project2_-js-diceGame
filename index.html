@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>JS PWA</title>
+
+    <!-- 스타일시트 적용하기 -->
+    <link rel = "stylesheet" href = "./styles/index.css">
+
+    <!-- 폰트적용 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sunflower:wght@500&display=swap" rel="stylesheet">
+
+    <!-- 자바스크립트 -->
+    <!-- 내부 js -->
+    <!-- 위치1. head
+    <script>
+        alert("Hello, World!");
+        // console.log("Hello, World!"); :콘솔은 이용자들에게 보이지 않는다.
+        console.log(document.getElementById("bt"));
+    </script>
+    -->
+
+    <!-- 외부 js -->
+    <!-- <script src="./scripts/index.js"></script> -->
+    <script src="./scripts/diceDOM.js"></script>
+
+
+</head>
+
+<body>
+    <div id="root"> 
+        <header>
+            <div>
+                <h1>
+                    자바스크립트연습
+                </h1>
+            </div>
+        </header>
+        <!-- 위치2. body : 여기도 
+        <script>
+            alert("Hello, World!");
+            //console.log("Hello, World!");
+        </script>
+        -->
+        <!-- main#content + 엔터 -->
+        <main>
+            <div>
+                <h2>🎲주사위 게임🎲</h2>
+            </div>
+            <section id = "diceSection">
+                <!-- <div class = diceImg> -->
+                <!-- 주사위 이미지
+                 <img src = 주사위\1.png alt="HTML">
+                    <img src = 주사위\2.png alt="HTML">
+                    <img src = 주사위\3.png alt="HTML">
+                    <img src = 주사위\4.png alt="HTML">
+                    <img src = 주사위\5.png alt="HTML">
+                    <img src = 주사위\6.png alt="HTML">  
+                </div>     -->      
+            </section>
+            <section id = "rollingDice">
+                <!-- 주사위 돌아가는 이미지 -->
+            </section>
+
+            <!-- form에 input이 잘 되었을 때 서버로 날려줌 : (문제없으면)action -->
+            <section id = "formSection"> 
+                <form method="post" action = "index.html" name = form1 id = form1>
+                    <!-- form태그에 name속성은 반드시 줘야 한다. name 속성으로 서버에 전송하기때문! -->
+                    <fieldset>
+                        <legend id = fieldTitle> 숫자를 선택해 주세요!</legend>
+                        <input type = "radio" id = "r1" name = "num" value="1">
+                        <label for = "r1">1</label>
+                        <input type = "radio" id= "r2" name = "num" value="2">
+                        <label for = "r2">2</label>
+                        <input type = "radio" id= "r3" name = "num" value="3">
+                        <label for = "r3">3</label>
+                        <input type = "radio" id= "r4" name = "num" value="4">
+                        <label for = "r4">4</label>
+                        <input type = "radio" id= "r5" name = "num" value="5">
+                        <label for = "r5">5</label>
+                        <input type = "radio" id= "r6" name = "num" value="6">
+                        <label for = "r6">6</label>
+                    </fieldset>
+                </form>
+            </section>
+
+            <section id = "resultSection">ox</section>
+
+            <section id="buttonSection">
+                <button id="bt1" onclick="showStart();">시작!</button>
+                <button id="bt2" onclick="showDice();">주사위 던지기</button>
+                <button id="bt3" onclick="showResult();">확인</button>
+                <!-- <button class="bt1" onclick="funPrint(2);"><span>버튼2</span></button> -->
+            </section>
+            
+        </main>
+          <!-- 위치3. body : 여기도 가능
+        <script>
+            alert("Hello, World!");
+            //console.log("Hello, World!");
+        </script>
+        -->
+    </div>
+</body>
+
+</html>
